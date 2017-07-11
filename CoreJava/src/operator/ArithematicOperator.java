@@ -5,8 +5,9 @@ public class ArithematicOperator {
 		//int age = 126;
 		//String ageArg = args[0];
 		int age = Integer.parseInt(args[0]);
+		//34
+		System.out.println("age is "+age++);
 		
-		System.out.println("age is "+age);
 		System.out.println("Your Height should be "+ (age+3));
 		
 		System.out.println("Ager after one year");
