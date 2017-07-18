@@ -12,6 +12,7 @@ public class ArrayExample {
 //		System.out.println(args[0]+args[1]);
 		
 		int age = 3;
+		
 		int ages[] = {20,21,28,33};
 		String names[] = {"Aida","Kamakshi","Hiren"};
 //		float bag[] = new float[10];
@@ -38,7 +39,11 @@ public class ArrayExample {
 			System.out.println(val);
 		}
 		
-		
-		
+		int array2D[][] = new int[2][3];
+//		array2D[0][0] = 11;
+//		array2D[0][1] = 12;
+//		array2D[1][0] = 12;
+
+		System.out.println(array2D[1][2]);
 	}
 }

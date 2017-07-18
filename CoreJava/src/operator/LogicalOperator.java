@@ -1,5 +1,22 @@
 package operator;
 
+/*dfd
+df
+dfd
+fd
+fd
+fd
+f
+d
+*/
+
+/*
+ * dfdfd
+ * dfd
+ * fdfd
+ * fd
+ * 
+ */
 public class LogicalOperator {
 
 	public static void main(String[] args) {
@@ -20,7 +37,11 @@ public class LogicalOperator {
 		System.out.println("Are you guys eligible "
 				+ " for Drinking alcohol together " + areUBothElig);
 		
-		
+		if(areUBothElig){
+			System.out.println("You guys go ahead and enjoy");
+		}else{
+			System.out.println("Lets wait for you guys to grow up...");
+		}
 		
 		
 		int age = 3;
