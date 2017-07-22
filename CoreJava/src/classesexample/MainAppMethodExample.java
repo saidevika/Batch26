@@ -1,6 +1,6 @@
 package classesexample;
 
-public class MainAppConstructor {
+public class MainAppMethodExample {
 
 	public static void main(String[] args) {
 		Student aida = new Student();
@@ -13,10 +13,15 @@ public class MainAppConstructor {
 		rohit.age = 17;
 		rohit.placeOfBirth = "India";
 		
-		printStudentDetails(rohit);
-		checkStudentAgeForDriving(rohit);
+		printInfo(rohit);
+		printInfo(aida);
 //		System.out.println("Age ="+ aida.age + " Name = "+ aida.name +" POB ="+ aida.placeOfBirth);
 //		System.out.println("Age ="+ rohit.age + " Name = "+ rohit.name +" POB ="+ rohit.placeOfBirth);
+	}
+	
+	public static void printInfo(Student student){
+		printStudentDetails(student);
+		checkStudentAgeForDriving(student);
 	}
 	
 	public static void printStudentDetails(Student student){
