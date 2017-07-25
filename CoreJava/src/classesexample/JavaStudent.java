@@ -10,9 +10,23 @@ public class JavaStudent { // POJO : Plain Old Java Object
 	private Address address;
 	private Dog dog;
 	
-
+	//public JavaStudent(){}
+	
 	public JavaStudent(String name){//Constructors
 		this.name = name;
+	}
+	
+	public JavaStudent(String name, int age){//Constructors
+//		this.name = name;
+		this(name);
+		this.age = age;
+	}
+	
+	public JavaStudent(String name, int age, String placeOfBirth){//Constructors
+//		this.name = name;
+//		this.age = age;
+		this(name,age);
+		this.placeOfBirth  = placeOfBirth;
 	}
 	
 	public Dog getDog() {
