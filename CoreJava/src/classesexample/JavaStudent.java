@@ -7,7 +7,7 @@ public class JavaStudent { // POJO : Plain Old Java Object
 	private int age;
 	private String placeOfBirth; // properties or state
 	
-	private Address address;
+	private Address address; // has a relationship
 	private Dog dog;
 	
 	//public JavaStudent(){}
