@@ -1,6 +1,7 @@
 package inheritance;
+//import java.lang.Object; // no need to import because it belongs to the java.lang package
 
-public class Employee {
+public class Employee { // extends Object { : no need to extend, because every call by default extends Object class
 	private int id;
 	private String name;
 	private String dept;// Network // Software
@@ -30,4 +31,12 @@ public class Employee {
 		this.dept = dept;
 	}
 	
+	public void tieColor(){
+		System.out.println(dept +" : "+name + " Wear a Blue Color Tie");
+	}
+	
+	@Override
+	public String toString() {
+		return dept +": Employee Name "+ name +" EmpID "+ id; 
+	}
 }

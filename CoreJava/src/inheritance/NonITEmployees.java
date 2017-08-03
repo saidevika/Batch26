@@ -6,6 +6,7 @@ public class NonITEmployees extends Employee { // is a relationship
 	
 	public NonITEmployees(String name, int id) {
 		super(name, id);
+		super.setDept("NonIT");
 	}
 	
 	public String getFloorWork() {
