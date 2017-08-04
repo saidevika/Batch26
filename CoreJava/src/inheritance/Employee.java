@@ -39,4 +39,8 @@ public class Employee { // extends Object { : no need to extend, because every c
 	public String toString() {
 		return dept +": Employee Name "+ name +" EmpID "+ id; 
 	}
+	
+	public final void officeTiming(){
+		System.out.println("I come to office in between 9:00 am to 9:30 am ");
+	}
 }

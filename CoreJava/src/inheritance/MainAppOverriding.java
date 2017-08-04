@@ -23,6 +23,8 @@ public class MainAppOverriding {
 		NonITEmployees nite = new NonITEmployees("Rohit", 34);
 //		mao.printNonItDetails(nite);		
 		mao.printDetails(nite);
+		
+		nite.officeTiming();
 	}
 	
 	public void printDetails(Employee emp){
