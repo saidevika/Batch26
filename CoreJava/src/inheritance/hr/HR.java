@@ -6,6 +6,8 @@ public class HR extends MgmtEmployee{
 	
 	private String recruitingSkills;
 	private int recruitingExp;
+	int testing;
+	protected String proctedVariable;
 	
 	public HR(String name, int id) {
 		super(name, id);
@@ -27,6 +29,10 @@ public class HR extends MgmtEmployee{
 		this.recruitingExp = recruitingExp;
 	}
 	
+	@Override
+	public String toString() {
+		return "" + recruitingSkills + " "+ testing +" "+ proctedVariable;
+	}
 	
-	
+	private void callMe(){}
 }
