@@ -1,0 +1,29 @@
+1) Read text data from one file and write to another file. Do it using Readers and writers
+2) Using the same code from above. try reading and writing a binary file(.mp3, .pdf, .doc ....)
+3) Use Streams to read and write both binary files and text files
+4) Assume you have a D drive. 
+
+		MyDocument
+			music
+				
+			books
+				java
+					corejava.pdf
+					advjava.pdf
+					designpattern.doc
+				python
+					advancepython
+						advpython.pdf
+					MyPython.pdf	
+				mba
+					finance.pdf
+
+5) Given the root directory i,e MyDocument. I need to list out all the files
+
+corejava.pdf
+advjava.pdf
+....
+advpython.pdf
+
+6) Given the root Directory i,e MyDocument , i need to know how many sub-sub folders are present.
+	output shud be 6 folders.
