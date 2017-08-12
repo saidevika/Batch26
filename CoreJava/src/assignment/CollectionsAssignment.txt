@@ -1,0 +1,18 @@
+1) Read a file... get all the words from the file and put it in a list and print it.
+2) 
+	List<String> phones = new ArrayList<>();
+		phones.add("123-897-5678");
+		phones.add("123-897-3456");
+		phones.add("123-897-8888");
+		phones.add("123-897-5678");
+		
+		Write down all the values from this list to a file system.
+		
+		
+3) Create a method and return the above list and print only unique phonenumbers.
+
+4)     Using this code snippet from MapExample in line 51. try to do reverse engineering and print all the phones
+		and names..
+		List objects = new ArrayList();
+		objects.add(johnList);
+		objects.add(maryList);
