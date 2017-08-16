@@ -1,0 +1,24 @@
+Reader
+	Reader reader1
+	Reader reader2
+	Reader reader3
+	
+Calculator
+	Same as RolexWatch
+
+Reader class need to have the logic to wait on Calculator thread...
+
+
+MainApp{
+	main(){
+		Calculator calc = new Calcualtor();
+		
+		Reader r1 = new Reader(calc);
+		Reader r2 = new Reader(calc);
+		Reader r3 = new Reader(calc);
+	}
+}
+
+Reader -> Thread
+Calculator -> Thread --> calculator will use a method notifyAll()
+		

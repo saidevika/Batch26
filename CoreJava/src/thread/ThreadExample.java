@@ -2,7 +2,7 @@ package thread;
 
 public class ThreadExample {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		System.out.println(Thread.currentThread().getName());
 		
@@ -16,10 +16,15 @@ public class ThreadExample {
 		
 		Bike honda = new Bike();
 		
-		Thread johnThread = new Thread(honda,"John");
-		johnThread.start();
+//		Thread johnThread = new Thread(honda,"John");
+//		johnThread.start();
+		
 		
 		Thread charlieThread = new Thread(honda,"Charlie");
+		charlieThread.start();
+		
+		Thread.sleep(6000);
+		
 		charlieThread.start();
 		
 		System.out.println("I am at the END of the program...");

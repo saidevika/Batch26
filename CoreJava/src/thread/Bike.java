@@ -1,6 +1,8 @@
 package thread;
+class Machine{}
 
-public class Bike implements Runnable{
+public class Bike extends Machine implements Runnable {
+	
 	@Override
 	public synchronized void run() {
 		for(int i=0 ; i < 5 ; i++){

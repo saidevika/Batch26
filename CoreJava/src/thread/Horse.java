@@ -1,5 +1,4 @@
 package thread;
-
 public class Horse extends Thread {
 	
 	@Override
