@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import jrout.tutorial.web.domain.Employee;
 import jrout.tutorial.web.service.IEmployeeService;
 import jrout.tutorial.web.service.impl.EmployeeServiceImpl;
@@ -20,6 +22,8 @@ import jrout.tutorial.web.service.impl.EmployeeServiceImpl;
  */
 @WebServlet("/EmployeeServlet")
 public class EmployeeServlet extends HttpServlet{
+	private final static Logger logger = Logger.getLogger(EmployeeServlet.class);
+	
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -27,12 +31,12 @@ public class EmployeeServlet extends HttpServlet{
 	 */
 	public EmployeeServlet() {
 		super();
-		System.out.println("Servlet Constructor...");
+		logger.info("Servlet Constructor...");
 	}
 	
 	@Override
 	public void init() throws ServletException {
-		System.out.println("Servlet Has been initialized...");
+		logger.info("Servlet Has been initialized...");
 	}
 	/*@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -45,14 +49,15 @@ public class EmployeeServlet extends HttpServlet{
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+		logger.info("Remote Host Requested URL "+ request.getRemoteHost() );
 		String empIdStr = request.getParameter("empId");
-		System.out.println("Service method is invoked..."+ empIdStr);
+		logger.info("Service method is invoked..."+ empIdStr);
 		int empId = Integer.parseInt(empIdStr);
 		// IEmployeeDAO employeeDao = new EmployeeDAOImpl();
 		IEmployeeService employeeService = new EmployeeServiceImpl();
 		Employee employee = employeeService.fetchEmployee(empId);
 		request.setAttribute("employee", employee);
+		logger.debug("Employee Object has been set...");
 		/*RequestDispatcher rdh = request.getRequestDispatcher("header.jsp");
 		rdh.include(request, response);*/
 		RequestDispatcher rdb = request.getRequestDispatcher("view.jsp");
@@ -84,6 +89,6 @@ public class EmployeeServlet extends HttpServlet{
 	
 	@Override
 	public void destroy() {
-		System.out.println("The Servlet is been destroyed...");
+		logger.info("The Servlet is been destroyed...");
 	}
 }
