@@ -10,5 +10,5 @@
       	<property name="employeeDAO" ref="employeeDAO"/>
       </bean>
       
-      <bean id="employeeServiceNew" class="jrout.tutorial.spring.core.employee.service.impl.EmployeeServiceNewImpl"/>
+      <bean id="employeeServiceNew" class="jrout.tutorial.spring.core.employee.service.impl.EmployeeServiceNewImpl" />
 </beans>

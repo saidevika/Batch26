@@ -9,17 +9,20 @@ import org.springframework.core.io.Resource;
 
 import jrout.tutorial.spring.core.employee.domain.Employee;
 import jrout.tutorial.spring.core.employee.service.IEmployeeService;
-import jrout.tutorial.spring.core.employee.service.EmployeeServiceNewImpl;
 public class MainApp {
 
 	public static void main(String[] args) {
 		Resource res = new ClassPathResource("applicationContext.xml");
 		BeanFactory factory = new XmlBeanFactory(res);
 		IEmployeeService empService = (IEmployeeService)factory.getBean("employeeService");
-		List<Employee> empList = empService.getEmployees("");
 		
+		List<Employee> empList = empService.getEmployees("");
+		for(Employee emp : empList){
+			System.out.println(emp);
+			printMe(emp);
+		}
 		//empList.forEach(System.out::println);
-		empList.forEach(MainApp::printMe);
+		//empList.forEach(MainApp::printMe);
 	}
 	
 	public static void printMe(Employee emp){

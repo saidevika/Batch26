@@ -1,12 +1,14 @@
-package jrout.tutorial.spring.core.employee.service;
+package jrout.tutorial.spring.core.employee.dao.impl;
+
+import jrout.tutorial.spring.core.employee.dao.IEmployeeDAO;
+import jrout.tutorial.spring.core.employee.domain.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jrout.tutorial.spring.core.employee.domain.Employee;
+public class EmployeeDAOImpl implements IEmployeeDAO {
 
-public class EmployeeServiceImpl implements IEmployeeService{
-
+	@Override
 	public List<Employee> getEmployees(String departmentName) {
 		List<Employee> empList = new ArrayList<>();
 		empList.add(new Employee("34","Raj","Malhotra"));
