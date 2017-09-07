@@ -8,15 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class EmployeeDAOImpl implements IEmployeeDAO {
+public class EmployeeDAOHibernateImpl implements IEmployeeDAO {
 
 	@Override
 	public List<Employee> getEmployees(String departmentName) {
 
-		// JDBC
+		// Hibernate
 		List<Employee> empList = new ArrayList<>();
-		empList.add(new Employee("34","Raj","Malhotra"));
-		empList.add(new Employee("35","Depan","Patel"));
+		Employee emp1 = new Employee("34","Raj","Malhotra");
+		Employee emp2 = new Employee("35","Depan","Patel");
+		empList.add(emp1);
+
+		empList.add(emp2);
+
 		return empList;
 	}
 }
