@@ -11,7 +11,7 @@ import java.util.List;
 public class EmployeeDAOImpl implements IEmployeeDAO {
 
 	@Override
-	public List<Employee> getEmployees(String departmentName) {
+	public List<Employee> getEmployees(String lastName) {
 
 		// JDBC
 		List<Employee> empList = new ArrayList<>();

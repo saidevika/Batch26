@@ -24,7 +24,7 @@ public class EmployeeSpringJDBCDAOImpl implements IEmployeeDAO {
 	ResultSet rs = null;
 
 	@Override
-	public List<Employee> getEmployees(String departmentName){
+	public List<Employee> getEmployees(String lastName){
 		List<Employee> empList = new ArrayList<>();
 		try {
 			con = dataSource.getConnection();

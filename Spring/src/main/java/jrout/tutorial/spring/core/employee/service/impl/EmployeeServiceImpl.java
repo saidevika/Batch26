@@ -11,10 +11,10 @@ import java.util.List;
 @Component(value = "employeeService")
 public class EmployeeServiceImpl implements IEmployeeService {
 
-	@Resource(name = "employeeSpringJDBCDAOImpl")
+	@Resource(name = "employeeSpringJDBCTemplateImpl")
 	private IEmployeeDAO employeeDAO;
 
-	public List<Employee> getEmployees(String departmentName) {
-		return employeeDAO.getEmployees(departmentName);
+	public List<Employee> getEmployees(String lastName) {
+		return employeeDAO.getEmployees(lastName);
 	}
 }

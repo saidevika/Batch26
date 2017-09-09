@@ -11,7 +11,7 @@ import java.util.List;
 public class EmployeeDAOHibernateImpl implements IEmployeeDAO {
 
 	@Override
-	public List<Employee> getEmployees(String departmentName) {
+	public List<Employee> getEmployees(String lastName) {
 
 		// Hibernate
 		List<Employee> empList = new ArrayList<>();

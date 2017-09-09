@@ -1,10 +1,12 @@
 package jrout.tutorial.spring.core.employee.domain;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
 	private String empId;
 	private String firstName;
 	private String lastName;
-	
+	public Employee(){}
 	public Employee(String empId, String firstName, String lastName){
 		this.empId = empId;
 		this.firstName = firstName;

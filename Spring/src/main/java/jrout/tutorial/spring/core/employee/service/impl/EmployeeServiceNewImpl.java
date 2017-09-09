@@ -10,7 +10,7 @@ public class EmployeeServiceNewImpl implements IEmployeeService{
 	public EmployeeServiceNewImpl(){
 		System.out.println("EmployeeServiceNewImpl:: Constructor is invoked...");
 	}
-	public List<Employee> getEmployees(String departmentName) {
+	public List<Employee> getEmployees(String lastName) {
 		return null;
 	}
 }
